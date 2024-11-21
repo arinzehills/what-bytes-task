@@ -16,14 +16,19 @@ pnpm dev
 bun dev
 ```
 
+## Core Libaries used
+
+- Tailwind
+- Zustand for state management
 
 ## App Features
 
-- You can register or login a user but it does not persist in storage but just in memory other wise  Sign in as the admin with this credentials email: "admin@example.com", password: "password123". (please any other apart from this will fail)
+- You can register or login a user but it does not persist in storage but just in memory other wise Sign in as the admin with this credentials email: "admin@example.com", password: "password123". (please any other apart from this will fail)
 - Updating candidate score and using Zustand as state management
-  
 - Displaying list of interns within the company (this is just dummy data).
-   
 - Dashboard Displays numbers of employees in the organisation.
 
- 
+## Design Pattern and Architecture used
+
+- Modular Architecture
+- Hooks Patten
