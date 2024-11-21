@@ -19,8 +19,8 @@ export const useLogin = () => {
     const searchParams = useSearchParams();
     const returnUrl = searchParams.get("returnUrl");
     const { data, error, isLoading, execute } = usePost<LoginResponse>();
-    const [setUser] = useLocalStorage<any>("user", "");
-    const [setToken] = useLocalStorage<any>("user-token", "");
+    const [user, setUser] = useLocalStorage<any>("user", "");
+    const [token, setToken] = useLocalStorage<any>("token", "");
 
     const handleLogin = async (values: { "action": "login", email: string; password: string }) => {
         execute("/api/auth", values);

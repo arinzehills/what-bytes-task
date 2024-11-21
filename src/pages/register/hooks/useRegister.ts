@@ -19,8 +19,8 @@ export const useRegister = () => {
     const searchParams = useSearchParams();
     const returnUrl = searchParams.get("returnUrl");
     const { data, error, isLoading, execute } = usePost<RegisterResponse>();
-    const [setUser] = useLocalStorage<any>("user", "");
-    const [setToken] = useLocalStorage<any>("token", "");
+    const [user, setUser] = useLocalStorage<any>("user", "");
+    const [token, setToken] = useLocalStorage<any>("token", "");
 
     const handleLogin = async (values: { "action": "register", name: string; email: string; password: string }) => {
         execute("/api/auth", values);
