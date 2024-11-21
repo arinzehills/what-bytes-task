@@ -4,18 +4,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #656565;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ededed ;
+    --danger: #ff7782;
+    --yellow: #d2a338;
+    --lightPurple: #ff0015;
+    --darkPurple: #710d16;
+    --success: #41f1b6;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+
+  background:linear-gradient(to Top,  var(--background), var(--foreground));
   font-family: Arial, Helvetica, sans-serif;
 }
