@@ -25,7 +25,7 @@ export const useRegister = () => {
     const handleLogin = async (values: { "action": "register", name: string; email: string; password: string }) => {
         execute("/api/auth", values);
     };
-
+    console.log("ds")
     useEffect(() => {
         if (data) {
             setUser(data.data.user);
